@@ -3,10 +3,6 @@
 
 MVC Framework met Nederlands commentaar
 
-## Error
-De error `Warning: Trying to access array offset on value of type null in C:\xampp\htdocs\MVCphp\app\libraries\Core.php on line 12`  komt door dat er geen URL in view kan worden gegeven omdat de URL standaard leeg is als je op de index pagina komt. 
-(*Wordt nog naar gekeken*)
-
 ## Installatie
 
 Pak het zip bestandje uit in je htdocs (XAMPP) en open het mapje met je code editor.

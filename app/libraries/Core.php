@@ -8,12 +8,15 @@
         // In de construct word de URL behandeld (Voorbeeld URL: MVCphp/shop/tshirt/mannen)
         public function __construct() {
            $url = $this->getURL();
-            // Zoek in controller naar eerste url waarde, ucwords zorgt ervoor dat alles met een hoofletter begint
-           if(file_exists('../app/controllers/' . ucwords($url[0]) . '.php')) {
+           if(isset($url[0])) {
+                // Zoek in controller naar eerste url waarde, ucwords zorgt ervoor dat alles met een hoofletter begint
+                if(file_exists('../app/controllers/' . ucwords($url[0]) . '.php')) {
                 // De nieuwe controller word toegewezen
                 $this->currentController = ucwords($url[0]);
                 unset($url[0]);
-           } 
+                } 
+           }
+            
 
             // Require de controller
             require_once '../app/controllers/' . $this->currentController . '.php';
