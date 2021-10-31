@@ -15,7 +15,7 @@ Als je de mapnaam wil veranderen dan moet je dat ook aangeven in de .htacces bij
 <IfModule mod_rewrite.c>
     Options -Multiviews
     RewriteEngine On
-    RewriteBase /MVCphp/public
+    RewriteBase /mvc-php-main/public
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
@@ -35,7 +35,7 @@ define('DB_NAME', 'mvcphp');
 ### Config
 Bij URLROOT voer je standaard URL in, bij WEBSITENAAM voer je de naam in van je website.
 ```sh
-define('URLROOT', 'http://localhost/MVCphp');
+define('URLROOT', 'http://localhost/mvc-php-main');
 define('WEBSITENAAM', 'MVC PHP');
 ```
 

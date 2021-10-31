@@ -8,7 +8,7 @@ define('DB_NAME', 'mvcphp');
 // App ROOT
 define('APPROOT', dirname(dirname(__FILE__)));
 // URL ROOT (Dynamische link)
-define('URLROOT', 'http://localhost/MVCphp');
+define('URLROOT', 'http://localhost/mvc-php-main');
 // Website naam;
 define('WEBSITENAAM', 'MVC PHP');
 ?>

@@ -1,5 +1,16 @@
 <?php
-
+/**
+ * Database connectie class.
+ * 
+ * @method Void query(String $sql)
+ * @method Void bind(String $parameter, String $value, PDO Type $type{OPTIONAL})
+ * @method Object execute()
+ * @method Object resultSet()
+ * @method Object singel()
+ * @method Int rowCount()
+ * 
+ * @author Noah Wilderom
+ */
 class Database {
     private $dbHost = DB_HOST;
     private $dbUser = DB_USER;

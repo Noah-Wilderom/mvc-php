@@ -1,14 +1,20 @@
 <?php
-// Hier worden alle paginas ingeladen
+/**
+ * Pages Controller 
+ * 
+ * @author Noah Wilderom
+ * @see Controller class
+ */
 Class Pages extends Controller{
 
     public function __construct() {
         $this->userModel = $this->model('User');
+        $this->helper = $this->helpers('Helpers');
+        
     }
 
     public function index() {
-
-        
+  
         $this->view('pages/index');
     }
 

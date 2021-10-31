@@ -1,5 +1,9 @@
 <?php
-// Core App Class
+/**
+ * Core app class
+ * 
+ * @author Noah Wilderom
+ */
     Class Core {
         protected $currentController = 'Pages';
         protected $currentMethod = 'index';
@@ -8,14 +12,14 @@
         // In de construct word de URL behandeld (Voorbeeld URL: MVCphp/shop/tshirt/mannen)
         public function __construct() {
            $url = $this->getURL();
-           if(isset($url[0])) {
+        //    if(isset($url[0])) {
                 // Zoek in controller naar eerste url waarde, ucwords zorgt ervoor dat alles met een hoofletter begint
                 if(file_exists('../app/controllers/' . ucwords($url[0]) . '.php')) {
                 // De nieuwe controller word toegewezen
                 $this->currentController = ucwords($url[0]);
                 unset($url[0]);
                 } 
-           }
+        //    }
             
 
             // Require de controller
@@ -37,6 +41,12 @@
             call_user_func_array([$this->currentController, $this->currentMethod], $this->params);
         }
 
+
+        /**
+         * Krijg de volledige URL
+         * 
+         * @return Array
+         */
         public function getURL() {
             if(isset($_GET['url'])) {
                 $url = rtrim($_GET['url'], '/');
